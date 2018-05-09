@@ -1,13 +1,12 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
 use GuzzleHttp;
-use Arkade\Support;
-use Arkade\Apparel21;
-use Arkade\Apparel21\Contracts;
-use Arkade\Apparel21\Entities;
-use Arkade\Apparel21\Serializers;
+use Omneo\Apparel21;
+use Omneo\Apparel21\Contracts;
+use Omneo\Apparel21\Entities;
+use Omneo\Apparel21\Serializers;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -30,10 +29,10 @@ class UpdatePerson extends BaseAction implements Contracts\Action
     /**
      * CreatePerson constructor.
      *
-     * @param Support\Contracts\Person $person
-     * @throws \Arkade\Apparel21\Exceptions\NotFoundException
+     * @param Contracts\Person $person
+     * @throws \Omneo\Apparel21\Exceptions\NotFoundException
      */
-    public function __construct($id, Support\Contracts\Person $person)
+    public function __construct($id, Contracts\Person $person)
     {
         // Throw exception if $id blank/ NULL to prevent full search timeout
         if (empty($id)) {
@@ -63,12 +62,12 @@ class UpdatePerson extends BaseAction implements Contracts\Action
      * Transform a PSR-7 response.
      *
      * @param  ResponseInterface $response
-     * @return Support\Contracts\Person
+     * @return Contracts\Person
      */
     public function response(ResponseInterface $response)
     {
         // Populate ID from Location header if possible
-        if ($this->person instanceof Support\Contracts\Identifiable) {
+        if ($this->person instanceof Contracts\Identifiable) {
             $this->person->getIdentifiers()->put(
                 'ap21_id',
                 $this->parseLocationHeader($response)

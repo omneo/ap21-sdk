@@ -40,7 +40,7 @@
     <Loyalties>
         <Loyalty>
             <LoyaltyTypeId>1000</LoyaltyTypeId>
-            <LoyaltyType>Arkade Loyalty Card</LoyaltyType>
+            <LoyaltyType>Omneo Loyalty Card</LoyaltyType>
             <CardNo>LM100001</CardNo>
             <JoinDate>2018-01-01</JoinDate>
         </Loyalty>

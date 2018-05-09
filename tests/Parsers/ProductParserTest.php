@@ -1,14 +1,14 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use Mockery as m;
 use Carbon\Carbon;
-use Arkade\Support\Contracts;
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Contracts;
+use Omneo\Apparel21\Entities;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Collection;
-use Arkade\Apparel21\Contracts\ReferenceResolver;
+use Omneo\Apparel21\Contracts\ReferenceResolver;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 
 class ProductParserTest extends TestCase

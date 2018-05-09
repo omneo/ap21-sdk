@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Entities;
+namespace Omneo\Apparel21\Entities;
 
-use Arkade\Support\Contracts;
-use Arkade\Support\Traits;
+use Omneo\Apparel21\Contracts;
+use Omneo\Apparel21\Traits;
 
 class Address implements Contracts\Address
 {

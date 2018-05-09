@@ -1,10 +1,10 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
 use GuzzleHttp;
-use Arkade\Apparel21\Parsers;
-use Arkade\Apparel21\Contracts;
+use Omneo\Apparel21\Parsers;
+use Omneo\Apparel21\Contracts;
 use Illuminate\Support\Collection;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Contracts;
+namespace Omneo\Apparel21\Contracts;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 
 interface ReferenceResolver
 {

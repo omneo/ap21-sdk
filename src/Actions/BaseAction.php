@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
-use Arkade\Apparel21\Client;
+use Omneo\Apparel21\Client;
 
 abstract class BaseAction
 {

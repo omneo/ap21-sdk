@@ -4,7 +4,7 @@
     <LoyaltiesType="Array">
         <Loyalty>
             <LoyaltyTypeId>1000</LoyaltyTypeId>
-            <LoyaltyType>ArkadeLoyaltyCard</LoyaltyType>
+            <LoyaltyType>OmneoLoyaltyCard</LoyaltyType>
             <CardNo>LM100001</CardNo>
             <JoinDate>2018-01-01</JoinDate>
         </Loyalty>

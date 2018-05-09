@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Factories;
+namespace Omneo\Apparel21\Factories;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 
 class OrderGiftCardFactory
 {
@@ -72,7 +72,7 @@ class OrderGiftCardFactory
                         'EmailSubject'        => 'Decjuba GV Test Voucher 01',
                         'Email'               => 'foo@bar.com.au',
                         'PersonalisedMessage' => 'Decjuba GV Test Voucher for Capcom Team',
-                        'RecieverName'        => 'Arkade Capcom team'
+                        'RecieverName'        => 'Omneo Capcom team'
                     ])
                 )
         );

@@ -1,10 +1,10 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use Carbon\Carbon;
-use Arkade\Support\Contracts;
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Contracts;
+use Omneo\Apparel21\Entities;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Collection;
 
@@ -117,7 +117,7 @@ class PersonParserTest extends TestCase
         );
 
         $this->assertEquals('1000', $person->getLoyalties()->first()->getTypeId());
-        $this->assertEquals('Arkade Loyalty Card', $person->getLoyalties()->first()->getTypeName());
+        $this->assertEquals('Omneo Loyalty Card', $person->getLoyalties()->first()->getTypeName());
         $this->assertEquals('LM100001', $person->getLoyalties()->first()->getCardNumber());
         $this->assertEquals('2018-01-01', $person->getLoyalties()->first()->getJoinDate()->toDateString());
 

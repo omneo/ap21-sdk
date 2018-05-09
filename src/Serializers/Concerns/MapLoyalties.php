@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Serializers\Concerns;
+namespace Omneo\Apparel21\Serializers\Concerns;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 use Illuminate\Support\Collection;
 
 trait MapLoyalties

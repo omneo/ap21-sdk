@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkade\Apparel21\Serializers;
+namespace Omneo\Apparel21\Serializers;
 
 class XMLHelper
 {

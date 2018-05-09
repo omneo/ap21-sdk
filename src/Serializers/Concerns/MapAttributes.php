@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkade\Apparel21\Serializers\Concerns;
+namespace Omneo\Apparel21\Serializers\Concerns;
 
 use Illuminate\Support\Collection;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Arkade\Apparel21;
+namespace Omneo\Apparel21;
 
 use Exception;
 use GuzzleHttp;
 use GuzzleHttp\Middleware;
 use GuzzleHttp\MessageFormatter;
-use Arkade\Apparel21\Exceptions;
+use Omneo\Apparel21\Exceptions;
 use Illuminate\Support\Collection;
 use Psr\Http\Message\RequestInterface;
 use Psr\Log\LoggerInterface;

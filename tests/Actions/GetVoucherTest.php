@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
 use GuzzleHttp\Psr7\Response;
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 use PHPUnit\Framework\TestCase;
 
 class GetVoucherTest extends TestCase

@@ -1,12 +1,12 @@
 <?php
 
-namespace Arkade\Apparel21\Resolvers;
+namespace Omneo\Apparel21\Resolvers;
 
-use Arkade\Apparel21\Client;
-use Arkade\Apparel21\Actions;
-use Arkade\Apparel21\Entities;
-use Arkade\Apparel21\Contracts;
-use Arkade\Apparel21\Exceptions;
+use Omneo\Apparel21\Client;
+use Omneo\Apparel21\Actions;
+use Omneo\Apparel21\Entities;
+use Omneo\Apparel21\Contracts;
+use Omneo\Apparel21\Exceptions;
 use Illuminate\Support\Collection;
 
 class ReferenceResolver implements Contracts\ReferenceResolver

@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Entities;
+namespace Omneo\Apparel21\Entities;
 
-use Arkade\Support\Traits;
-use Arkade\Support\Contracts;
+use Omneo\Apparel21\Traits;
+use Omneo\Apparel21\Contracts;
 use Illuminate\Support\Collection;
 
 class LineItem implements Contracts\LineItem, Contracts\HasAttributes, Contracts\Identifiable

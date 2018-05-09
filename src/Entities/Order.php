@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Entities;
+namespace Omneo\Apparel21\Entities;
 
-use Arkade\Support\Traits;
-use Arkade\Support\Contracts;
+use Omneo\Apparel21\Traits;
+use Omneo\Apparel21\Contracts;
 
 class Order implements Contracts\Order, Contracts\Identifiable
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
 use Mockery as m;
-use Arkade\Apparel21\Client;
+use Omneo\Apparel21\Client;
 use GuzzleHttp\Psr7\Response;
-use Arkade\Apparel21\Entities;
-use Arkade\Apparel21\Contracts;
+use Omneo\Apparel21\Entities;
+use Omneo\Apparel21\Contracts;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Collection;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;

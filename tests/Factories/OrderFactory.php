@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Factories;
+namespace Omneo\Apparel21\Factories;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 
 class OrderFactory
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkade\Apparel21;
+namespace Omneo\Apparel21;
 
 use GuzzleHttp;
 use Illuminate\Support\Facades\Log;

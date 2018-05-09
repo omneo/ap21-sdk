@@ -1,10 +1,10 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use SimpleXMLElement;
 use Illuminate\Support\Collection;
-use Arkade\Apparel21\Entities\Address;
+use Omneo\Apparel21\Entities\Address;
 
 class AddressParser
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use SimpleXMLElement;
-use Arkade\Apparel21\Entities\Variant;
-use Arkade\Apparel21\Entities\LineItem;
-use Arkade\Apparel21\Entities\ServiceType;
+use Omneo\Apparel21\Entities\Variant;
+use Omneo\Apparel21\Entities\LineItem;
+use Omneo\Apparel21\Entities\ServiceType;
 
 class LineItemParser
 {

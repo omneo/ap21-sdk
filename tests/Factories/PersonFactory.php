@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Factories;
+namespace Omneo\Apparel21\Factories;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 use Carbon\Carbon;
 
 class PersonFactory
@@ -51,7 +51,7 @@ class PersonFactory
         $person->getLoyalties()->push(
             (new Entities\Loyalty)
                 ->setTypeId('1000')
-                ->setTypeName('Arkade Loyalty Card')
+                ->setTypeName('Omneo Loyalty Card')
                 ->setCardNumber('LM100001')
                 ->setJoinDate(Carbon::parse('2018-01-01'))
         );

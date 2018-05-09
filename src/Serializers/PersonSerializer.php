@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Serializers;
+namespace Omneo\Apparel21\Serializers;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 use Illuminate\Support\Facades\Log;
 
 class PersonSerializer
