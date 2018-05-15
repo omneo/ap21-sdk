@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkade\Apparel21\Entities;
+namespace Omneo\Apparel21\Entities;
 
 class ProductNote
 {

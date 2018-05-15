@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use Carbon\Carbon;
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Collection;
 

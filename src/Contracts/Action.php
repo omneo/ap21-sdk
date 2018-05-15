@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Contracts;
+namespace Omneo\Apparel21\Contracts;
 
-use Arkade\Apparel21\Client;
-use Arkade\Support\Contracts;
+use Omneo\Apparel21\Client;
+use Omneo\Apparel21\Contracts;
 use Illuminate\Support\Collection;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
 use GuzzleHttp;
-use Arkade\Apparel21\Client;
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Client;
+use Omneo\Apparel21\Entities;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Collection;
 
@@ -38,7 +38,7 @@ class GetPersonTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Arkade\Apparel21\Exceptions\NotFoundException
+     * @expectedException \Omneo\Apparel21\Exceptions\NotFoundException
      */
     public function throws_not_found_exception_when_missing()
     {

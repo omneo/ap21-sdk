@@ -1,8 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Factories;
+namespace Omneo\Apparel21\Factories;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
+use Carbon\Carbon;
 
 class PersonFactory
 {
@@ -45,6 +46,14 @@ class PersonFactory
                 ->setState('Victoria')
                 ->setCountry('Australia')
                 ->setPostcode('3000')
+        );
+
+        $person->getLoyalties()->push(
+            (new Entities\Loyalty)
+                ->setTypeId('1000')
+                ->setTypeName('Omneo Loyalty Card')
+                ->setCardNumber('LM100001')
+                ->setJoinDate(Carbon::parse('2018-01-01'))
         );
 
         return $person;

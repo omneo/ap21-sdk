@@ -1,11 +1,12 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
+use Omneo\Apparel21;
 use GuzzleHttp;
-use Arkade\Apparel21\Parsers;
-use Arkade\Apparel21\Entities;
-use Arkade\Apparel21\Contracts;
+use Omneo\Apparel21\Parsers;
+use Omneo\Apparel21\Entities;
+use Omneo\Apparel21\Contracts;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -22,9 +23,16 @@ class GetPerson extends BaseAction implements Contracts\Action
      * GetPerson constructor.
      *
      * @param string $id
+     *
+     * @throws Apparel21\Exceptions\NotFoundException
      */
-    public function __construct($id)
+    public function  __construct($id)
     {
+        // Throw exception if $id blank/ NULL to prevent full search timeout
+        if (empty($id)) {
+            throw new Apparel21\Exceptions\NotFoundException;
+        }
+
         $this->id = $id;
     }
 

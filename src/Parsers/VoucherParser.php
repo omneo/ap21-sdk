@@ -1,10 +1,10 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use Carbon\Carbon;
 use SimpleXMLElement;
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 
 class VoucherParser
 {

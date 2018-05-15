@@ -16,8 +16,8 @@ This SDK provides simple access to the Apparel21 API. It handles most Apparel21 
 Install the SDK into your project using Composer.
 
 ```bash
-composer config repositories.apparel21-sdk git git@github.com:arkade-digital/apparel21-sdk.git
-composer require arkade/apparel21-sdk
+composer config repositories.apparel21-sdk git git@github.com:omneo/apparel21-sdk.git
+composer require omneo/apparel21-sdk
 ```
 
 ## Prerequisites
@@ -35,7 +35,7 @@ To begin sending requests to Apparel21, you will need a few pieces of informatio
 To begin using the SDK, you will first need to create an authenticated client with the information you have obtained above.
 
 ```php
-use Arkade\Apparel21;
+use Omneo\Apparel21;
 
 $client = (new Apparel21\Client('http://api.example.com/RetailAPI/'))
     ->setCredentials('username', 'password');
@@ -52,7 +52,7 @@ This package ships with a Laravel specific service provider which allows you to 
 Add the following to the `providers` array in your `config/app.php` file.
 
 ```php
-Arkade\Apparel21\LaravelServiceProvider::class
+Omneo\Apparel21\LaravelServiceProvider::class
 ```
 
 ### Adding config keys
@@ -84,7 +84,7 @@ To resolve a fully authenticated client, you simply pull it from the service con
 #### Type hinting
 
 ```php
-use Arkade\Apparel21;
+use Omneo\Apparel21;
 
 public function yourControllerMethod(Apparel21\Client $client) {
     // Call methods on $client
@@ -94,7 +94,7 @@ public function yourControllerMethod(Apparel21\Client $client) {
 #### Using the `app()` helper
 
 ```php
-use Arkade\Apparel21;
+use Omneo\Apparel21;
 
 public function anyMethod() {
     $client = app(Apparel21\Client::class);

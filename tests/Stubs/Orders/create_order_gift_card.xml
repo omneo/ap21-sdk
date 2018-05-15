@@ -40,7 +40,7 @@
                 <EmailSubject>Decjuba GV Test Voucher 01</EmailSubject>
                 <Email>foo@bar.com.au</Email>
                 <PersonalisedMessage>Decjuba GV Test Voucher for Capcom Team</PersonalisedMessage>
-                <RecieverName>Arkade Capcom team</RecieverName>
+                <RecieverName>Omneo Capcom team</RecieverName>
             </ExtraVoucherInformation>
         </OrderDetail>
     </OrderDetails>

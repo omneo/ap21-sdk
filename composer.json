@@ -1,20 +1,19 @@
 {
-    "name": "arkade/apparel21-sdk",
+    "name": "omneo/apparel21-sdk",
     "description": "PHP SDK for the Apparel21 API",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Arkade\\Apparel21\\": "src/"
+            "Omneo\\Apparel21\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Arkade\\Apparel21\\": "tests/"
+            "Omneo\\Apparel21\\": "tests/"
         }
     },
     "require": {
-        "arkade/support": "^1.6",
         "guzzlehttp/guzzle": "^6.3",
         "illuminate/pagination": "^5.4",
         "illuminate/support": "^5.4",
@@ -26,10 +25,6 @@
         "mockery/mockery": "^0.9.9"
     },
     "repositories": {
-        "support": {
-            "type": "git",
-            "url": "git@github.com:arkade-digital/support.git"
-        }
     },
     "config": {
         "sort-packages": true

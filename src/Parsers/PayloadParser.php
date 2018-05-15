@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use SimpleXMLElement;
 

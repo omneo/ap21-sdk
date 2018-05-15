@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Serializers;
+namespace Omneo\Apparel21\Serializers;
 
 use PHPUnit\Framework\TestCase;
-use Arkade\Apparel21\Factories;
+use Omneo\Apparel21\Factories;
 
 class OrderSerializerTest extends TestCase
 {

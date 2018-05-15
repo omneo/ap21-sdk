@@ -1,10 +1,10 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use SimpleXMLElement;
-use Arkade\Apparel21\Entities;
-use Arkade\Apparel21\Exceptions;
+use Omneo\Apparel21\Entities;
+use Omneo\Apparel21\Exceptions;
 use Illuminate\Support\Collection;
 
 class FreeStockParser

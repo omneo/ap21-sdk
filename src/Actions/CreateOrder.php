@@ -1,14 +1,13 @@
 <?php
 
-namespace Arkade\Apparel21\Actions;
+namespace Omneo\Apparel21\Actions;
 
-use Arkade\Support;
 use GuzzleHttp\Psr7\Request;
-use Arkade\Apparel21\Entities;
-use Arkade\Apparel21\Contracts;
+use Omneo\Apparel21\Entities;
+use Omneo\Apparel21\Contracts;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Arkade\Apparel21\Serializers\OrderSerializer;
+use Omneo\Apparel21\Serializers\OrderSerializer;
 
 class CreateOrder extends BaseAction implements Contracts\Action
 {

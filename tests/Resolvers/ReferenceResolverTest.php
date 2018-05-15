@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Resolvers;
+namespace Omneo\Apparel21\Resolvers;
 
 use GuzzleHttp;
-use Arkade\Apparel21\Client;
+use Omneo\Apparel21\Client;
 use PHPUnit\Framework\TestCase;
 
 class ReferenceResolverTest extends TestCase

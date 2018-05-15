@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 use PHPUnit\Framework\TestCase;
 
 class ReferenceParserTest extends TestCase

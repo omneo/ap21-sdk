@@ -1,9 +1,9 @@
 <?php
 
-namespace Arkade\Apparel21\Parsers;
+namespace Omneo\Apparel21\Parsers;
 
 use SimpleXMLElement;
-use Arkade\Apparel21\Entities;
+use Omneo\Apparel21\Entities;
 use Illuminate\Support\Collection;
 
 class PersonParser
@@ -43,6 +43,12 @@ class PersonParser
         $person->setAddresses(
             (new AddressParser)->parseCollection($payload->Addresses)
         );
+
+        if($payload->Loyalties) {
+            $person->setLoyalties(
+                (new LoyaltyParser)->parseCollection($payload->Loyalties)
+            );
+        }
 
         return $person;
     }
