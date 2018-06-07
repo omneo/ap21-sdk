@@ -24,8 +24,6 @@
         "phpunit/phpunit": "^6.1",
         "mockery/mockery": "^0.9.9"
     },
-    "repositories": {
-    },
     "config": {
         "sort-packages": true
     }

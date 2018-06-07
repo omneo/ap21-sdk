@@ -37,6 +37,7 @@ class LoyaltyParser
     public function parse(SimpleXMLElement $xml)
     {
         return (new Loyalty)
+            ->setId((string) $xml->Id)
             ->setTypeId((string) $xml->LoyaltyTypeId)
             ->setTypeName((string) $xml->LoyaltyType)
             ->setCardNumber((string) $xml->CardNo)
