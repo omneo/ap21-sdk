@@ -7,6 +7,13 @@ use Carbon\Carbon;
 class Loyalty
 {
     /**
+     * Id
+     *
+     * @var string
+     */
+    protected $id;
+
+    /**
      * Type Id
      *
      * @var string
@@ -33,6 +40,24 @@ class Loyalty
      * @var Carbon
      */
     protected $joinDate;
+
+    /**
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string $id
+     * @return Loyalty
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * @return string

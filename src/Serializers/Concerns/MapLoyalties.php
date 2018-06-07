@@ -39,6 +39,7 @@ trait MapLoyalties
     {
         return array_filter([
             '@node'         => 'Loyalty',
+            'Id'            => $loyalty->getId(),
             'LoyaltyTypeId' => $loyalty->getTypeId(),
             'LoyaltyType'   => $loyalty->getTypeName(),
             'CardNo'        => $loyalty->getCardNumber(),
