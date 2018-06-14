@@ -33,8 +33,8 @@ class GetPersonReferenceTypes extends BaseAction implements Contracts\Action
 
         $collection = new Collection;
 
-        foreach ($data->ReferenceType as $type) {
-            $collection->push((new Parsers\ReferenceTypeParser)->parse($type));
+        foreach ($data->ReferenceTypes->Reference as $type) {
+            $collection->push((new Parsers\PersonReferenceTypeParser)->parse($type));
         }
 
         return $collection;
