@@ -4,10 +4,31 @@ namespace Omneo\Apparel21\Parsers;
 
 use SimpleXMLElement;
 use Omneo\Apparel21\Entities;
+use Omneo\Apparel21\Contracts;
 use Illuminate\Support\Collection;
 
 class PersonParser
 {
+    /**
+     * Reference resolver.
+     *
+     * @var Contracts\ReferenceResolver
+     */
+    protected $referenceResolver;
+
+    /**
+     * Set reference resolver.
+     *
+     * @param  Contracts\ReferenceResolver|null $referenceResolver
+     * @return static
+     */
+    public function setReferenceResolver(Contracts\ReferenceResolver $referenceResolver = null)
+    {
+        $this->referenceResolver = $referenceResolver;
+
+        return $this;
+    }
+
     /**
      * Parse the given SimpleXmlElement to a Person entity.
      *
@@ -50,6 +71,35 @@ class PersonParser
             );
         }
 
+        $this->parseReferences($person, $payload->References);
+
         return $person;
+    }
+
+    /**
+     * Parse references to attributes on product.
+     *
+     * @param Entities\Person $product
+     * @param SimpleXMLElement $payload
+     */
+    protected function parseReferences(Entities\Person $person, SimpleXMLElement $payload)
+    {
+        if (! $this->referenceResolver) return;
+
+        foreach ($payload->Reference as $r) {
+
+            $reference = $this->referenceResolver->resolve(
+                (integer) $r->Id,
+                (integer) $r->ReferenceTypeId
+            );
+
+            if ($reference) {
+                $person->getAttributes()->offsetSet(
+                    strtolower($reference->getType()->getCode()),
+                    $reference->getCode()
+                );
+            }
+
+        }
     }
 }
