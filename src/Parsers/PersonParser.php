@@ -94,10 +94,7 @@ class PersonParser
             );
 
             if ($reference) {
-                $person->getReferences()->offsetSet(
-                    strtolower($reference->getType()->getCode()),
-                    $reference->getCode()
-                );
+                $person->getReferences()->push($reference);
             }
 
         }
