@@ -46,7 +46,7 @@ class PersonSerializer
 
         // Add the ID & UpdateTimeStamp fields to payload, which are required when sending PUT request
         if ($person->getIdentifiers()->has('ap21_id')) {
-            $payload['ID'] = $person->getIdentifiers()->get('ap21_id');
+            $payload['Id'] = $person->getIdentifiers()->get('ap21_id');
             $payload['UpdateTimeStamp'] = $person->getAttributes()->get('updated_at');
         }
 
