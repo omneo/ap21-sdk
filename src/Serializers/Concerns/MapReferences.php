@@ -41,8 +41,8 @@ trait MapReferences
     {
         return array_filter([
             '@node'           => 'Reference',
-            'Id'              => $reference->getId(),
             'ReferenceTypeId' => $reference->getType()->getId(),
+            'Id'              => $reference->getId(),
         ]);
     }
 
