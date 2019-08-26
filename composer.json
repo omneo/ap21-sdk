@@ -1,5 +1,5 @@
 {
-    "name": "omneo/apparel21-sdk",
+    "name": "omneo/ap21-sdk",
     "description": "PHP SDK for the Apparel21 API",
     "type": "library",
     "license": "MIT",
