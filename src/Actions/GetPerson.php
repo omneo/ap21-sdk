@@ -20,6 +20,13 @@ class GetPerson extends BaseAction implements Contracts\Action
     public $id;
 
     /**
+     * Implicitly fetch references for the person.
+     *
+     * @var bool
+     */
+    public $withReferences = true;
+
+    /**
      * GetPerson constructor.
      *
      * @param string $id
@@ -34,6 +41,30 @@ class GetPerson extends BaseAction implements Contracts\Action
         }
 
         $this->id = $id;
+    }
+
+    /**
+     * Implicitly fetch references for the person.
+     *
+     * @return static
+     */
+    public function withReferences()
+    {
+        $this->withReferences = true;
+
+        return $this;
+    }
+
+    /**
+     * Do not implicitly fetch references for the person.
+     *
+     * @return static
+     */
+    public function withoutReferences()
+    {
+        $this->withReferences = false;
+
+        return $this;
     }
 
     /**
@@ -54,7 +85,16 @@ class GetPerson extends BaseAction implements Contracts\Action
      */
     public function response(ResponseInterface $response)
     {
-        return (new Parsers\PersonParser)->parse(
+        $parser = new Parsers\PersonParser;
+
+        // Implicitly fetch references
+        if ($this->client && $this->withReferences) {
+            $parser->setReferenceResolver(
+                $this->client->getReferenceResolver()
+            );
+        }
+
+        return $parser->parse(
             (new Parsers\PayloadParser)->parse((string) $response->getBody())
         );
     }

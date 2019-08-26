@@ -11,8 +11,49 @@
     <JobTitle>Stylist</JobTitle>
     <Privacy>false</Privacy>
     <UpdateTimeStamp>20/03/2012 10:39:55 AM</UpdateTimeStamp>
-    <References Type="Array" />
     <IsAgent>false</IsAgent>
+    <References Type="Array">
+        <Reference>
+            <ReferenceTypeId>1467</ReferenceTypeId>
+            <Id>10075</Id>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>1529</ReferenceTypeId>
+            <Id>10508</Id>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>1527</ReferenceTypeId>
+            <Id>10557</Id>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>1528</ReferenceTypeId>
+            <Id>10649</Id>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>1530</ReferenceTypeId>
+            <Id/>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>1531</ReferenceTypeId>
+            <Id>10550</Id>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>1532</ReferenceTypeId>
+            <Id/>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>1747</ReferenceTypeId>
+            <Id/>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>27</ReferenceTypeId>
+            <Id>1853</Id>
+        </Reference>
+        <Reference>
+            <ReferenceTypeId>436</ReferenceTypeId>
+            <Id>17287</Id>
+        </Reference>
+    </References>
     <Addresses>
         <Billing>
             <ContactName>Dan Ahwa</ContactName>
