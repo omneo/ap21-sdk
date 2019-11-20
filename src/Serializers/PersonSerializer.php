@@ -56,6 +56,8 @@ class PersonSerializer
         $payload = $this->mapAttributes($payload, $person->getAttributes());
         $payload = $this->mapReferences($payload, $person->getReferences());
 
+        Log::info('Final payload:', ['payload' => $payload]);
+
         return $payload;
     }
 }
