@@ -28,7 +28,11 @@ class PersonSerializer
             $payload
         );
 
-        return (new XMLHelper)->stripHeader($payload->asXML());
+        $result = (new XMLHelper)->stripHeader($payload->asXML());
+
+        Log::info('** AP21 ** Final XML payload.', ['payload' => $result]);
+
+        return $result;
     }
 
     /**
@@ -55,8 +59,6 @@ class PersonSerializer
         $payload = $this->mapContacts($payload, $person->getContacts());
         $payload = $this->mapAttributes($payload, $person->getAttributes());
         $payload = $this->mapReferences($payload, $person->getReferences());
-
-        Log::info('Final payload:', ['payload' => $payload]);
 
         return $payload;
     }
