@@ -42,6 +42,13 @@ class Loyalty
     protected $joinDate;
 
     /**
+     * The expiry.
+     *
+     * @var Carbon
+     */
+    protected $expiry;
+
+    /**
      * @return string
      */
     public function getId()
@@ -111,6 +118,24 @@ class Loyalty
     {
         $this->cardNumber = $cardNumber;
         return $this;
+    }
+
+    /**
+     * @param Carbon $expiry
+     * @return Loyalty
+     */
+    public function setExpiry(Carbon $expiry = null)
+    {
+        $this->expiry = $expiry;
+        return $this;
+    }
+
+    /**
+     * @return Carbon
+     */
+    public function getExpiry()
+    {
+        return $this->expiry;
     }
 
     /**
