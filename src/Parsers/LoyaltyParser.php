@@ -36,11 +36,14 @@ class LoyaltyParser
      */
     public function parse(SimpleXMLElement $xml)
     {
+        $expiry = (string) $xml->Expiry;
+
         return (new Loyalty)
             ->setId((string) $xml->Id)
             ->setTypeId((string) $xml->LoyaltyTypeId)
             ->setTypeName((string) $xml->LoyaltyType)
             ->setCardNumber((string) $xml->CardNo)
+            ->setExpiry(! empty($expiry) ? Carbon::parse($expiry) : null)
             ->setJoinDate(Carbon::parse((string) $xml->JoinDate));
     }
 }
