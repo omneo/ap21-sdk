@@ -37,7 +37,7 @@ trait MapLoyalties
      */
     protected function serializeLoyalty(Entities\Loyalty $loyalty)
     {
-        return array_filter([
+        $serialized = array_filter([
             '@node'         => 'Loyalty',
             'Id'            => $loyalty->getId(),
             'LoyaltyTypeId' => $loyalty->getTypeId(),
@@ -46,5 +46,9 @@ trait MapLoyalties
             'Expiry'        => $loyalty->getExpiry() ? $loyalty->getExpiry()->toDateString() : null,
             'JoinDate'      => $loyalty->getJoinDate()->toDateString(),
         ]);
+        if(!isset($serialized['Expiry'])){
+            $serialized['Expiry'] = null;
+        }
+        return $serialized;
     }
 }
