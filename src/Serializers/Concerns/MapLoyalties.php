@@ -43,6 +43,7 @@ trait MapLoyalties
             'LoyaltyTypeId' => $loyalty->getTypeId(),
             'LoyaltyType'   => $loyalty->getTypeName(),
             'CardNo'        => $loyalty->getCardNumber(),
+            'Expiry'        => $loyalty->getExpiry() ? $loyalty->getExpiry()->toDateString() : null,
             'JoinDate'      => $loyalty->getJoinDate()->toDateString(),
         ]);
     }
