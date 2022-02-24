@@ -30,5 +30,21 @@ class LaravelServiceProvider extends ServiceProvider
 
             return $client;
         });
+
+        $this->app->singleton(V3Client::class, function ($app)
+        {
+            $client = new V3Client(config('services.apparel21.base_url'));
+            $client->setCredentials(
+                config('services.apparel21.username'),
+                config('services.apparel21.password')
+            );
+            $client->setCountryCode(config('services.apparel21.country_code'));
+            $client->setLogging(config('services.apparel21.logging'));
+            $client->setVerifyPeer(config('services.apparel21.verify'));
+            $client->setLogger(Log::getMonolog());
+            $client->setupClient();
+
+            return $client;
+        });
     }
 }

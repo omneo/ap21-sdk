@@ -9,7 +9,6 @@ class PersonSerializerClearLoyalties
 {
     use Concerns\MapContacts,
         Concerns\MapAddresses,
-        Concerns\MapLoyaltiesClear,
         Concerns\MapAttributes,
         Concerns\MapReferences;
 
@@ -29,6 +28,9 @@ class PersonSerializerClearLoyalties
         );
 
         $result = (new XMLHelper)->stripHeader($payload->asXML());
+
+        $result = substr($result, 0, -10);
+        $result .= '<Loyalties Type="Array"></Loyalties></Person>';
 
         Log::info('** AP21 ** Final XML payload.', ['payload' => $result]);
 
@@ -54,7 +56,6 @@ class PersonSerializerClearLoyalties
             $payload['UpdateTimeStamp'] = $person->getAttributes()->get('updated_at');
         }
 
-        $payload = $this->mapLoyalties($payload, $person->getLoyalties());
         $payload = $this->mapAddresses($payload, $person->getAddresses());
         $payload = $this->mapContacts($payload, $person->getContacts());
         $payload = $this->mapAttributes($payload, $person->getAttributes());
