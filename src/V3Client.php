@@ -350,7 +350,7 @@ class V3Client
      * @return mixed|Collection
      * @throws Exceptions\Apparel21Exception
      */
-    public function action(Contracts\Action $action)
+    public function action(Contracts\ActionClear $action)
     {
         try {
             return $action
