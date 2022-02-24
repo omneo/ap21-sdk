@@ -10,7 +10,7 @@ use Omneo\Apparel21\Serializers;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class UpdatePersonClearLoyalties extends BaseAction implements Contracts\Action
+class UpdatePersonClearLoyalties extends BaseActionClear implements Contracts\Action
 {
     /**
      * Apparel21 person ID.

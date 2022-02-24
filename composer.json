@@ -25,6 +25,7 @@
         "mockery/mockery": "^0.9.9"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "platform-check": false
     }
 }
