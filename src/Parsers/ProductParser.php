@@ -59,7 +59,8 @@ class ProductParser
                             'ap21_colour_id'   => (string) $colour->Id,
                             'ap21_colour_code' => (string) $colour->Code,
                             'ap21_sku_id'      => (string) $sku->Id,
-                            'ap21_size_code'   => (string) $sku->SizeCode
+                            'ap21_size_code'   => (string) $sku->SizeCode,
+                            'ap21_barcode'     => (string) $sku->Barcode
                         ]))
                         ->setOptions(new Collection([
                             'colour' => (string) $colour->Name,
