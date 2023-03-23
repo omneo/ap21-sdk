@@ -11,12 +11,14 @@ class Person implements
     Contracts\Identifiable,
     Contracts\HasAttributes,
     Contracts\HasReferences,
-    Contracts\HasLoyalties
+    Contracts\HasLoyalties,
+    Contracts\HasRewardsAccounts
 {
     use Traits\Person,
         Traits\Identifiable,
         Traits\HasAttributes,
         Traits\HasReferences,
-        Traits\HasLoyalties;
+        Traits\HasLoyalties,
+        Traits\HasRewardsAccounts;
 
 }

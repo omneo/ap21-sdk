@@ -71,6 +71,12 @@ class PersonParser
             );
         }
 
+        if($payload->Loyalties->RewardsAccounts) {
+            $person->setRewardsAccounts(
+                (new RewardsAccountParser)->parseCollection($payload->RewardsAccounts)
+            );
+        }
+
         $this->parseReferences($person, $payload->References);
 
         return $person;
