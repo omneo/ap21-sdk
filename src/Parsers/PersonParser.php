@@ -37,6 +37,7 @@ class PersonParser
      */
     public function parse(SimpleXMLElement $payload)
     {
+        dump(json_decode(json_encode($payload)));
         $person = (new Entities\Person)
             ->setIdentifiers(new Collection([
                 'ap21_id'   => (string) $payload->Id,
@@ -71,7 +72,7 @@ class PersonParser
             );
         }
 
-        if($payload->Loyalties->RewardsAccounts) {
+        if($payload->RewardsAccounts) {
             $person->setRewardsAccounts(
                 (new RewardsAccountParser)->parseCollection($payload->RewardsAccounts)
             );
