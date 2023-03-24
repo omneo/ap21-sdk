@@ -43,7 +43,7 @@ class GetRewardAccount extends BaseAction implements Contracts\Action
      */
     public function request()
     {
-        return new GuzzleHttp\Psr7\Request('GET', 'rewards/accounts/'.$this->id);
+        return new GuzzleHttp\Psr7\Request('GET', 'Rewards/Accounts/'.$this->id);
     }
 
     /**
