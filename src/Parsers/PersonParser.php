@@ -37,7 +37,6 @@ class PersonParser
      */
     public function parse(SimpleXMLElement $payload)
     {
-        dump(json_decode(json_encode($payload)));
         $person = (new Entities\Person)
             ->setIdentifiers(new Collection([
                 'ap21_id'   => (string) $payload->Id,
